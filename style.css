@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1200px;
+  width: 600px;
+  background-color: #f0f0f0;
+  background-image: url("./images//low-angle-view-of-night-starry-sky-and-space-dust-in-the-universe-cosmos-dark-background-night-shot-of-constellation-free-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  color: white;
+}
+
+.banner img {
+  max-width: 40%;
+  height: auto;
+}
+
+.header,
+.text-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  font-size: 20px;
+  opacity: 0;
+  z-index: 999;
+  font-size: 25px;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.line1 {
+  animation-name: animateLine1;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.line2 {
+  animation-name: animateLine2;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.line3 {
+  animation-name: animateLine3;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+.line3 button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(68, 170, 68);
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  gap: 150px;
+}
+@keyframes animateLine1 {
+  0%,
+  10% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  20%,
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes animateLine2 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  30%,
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes animateLine3 {
+  0%,
+  30% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  40%,
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@media only screen and (max-height: 1199px), (max-width: 599px) {
+  .banner {
+    width: 100vw;
+    height: 100vh;
+  }
+}
